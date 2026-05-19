@@ -1,0 +1,58 @@
+// Mapeo code -> nombre de archivo en /public/flags/.
+// Las extensiones varían (.png / .webp / .svg) según el original.
+
+export const FLAG_FILES: Record<string, string> = {
+  ALG: 'alg.png',
+  ARG: 'arg.png',
+  AUS: 'aus.svg',
+  AUT: 'aut.png',
+  BEL: 'bel.png',
+  BIH: 'bih.png',
+  BRA: 'bra.png',
+  CAN: 'can.png',
+  CIV: 'civ.png',
+  COD: 'cod.png',
+  COL: 'col.png',
+  CPV: 'cpv.png',
+  CRO: 'cro.png',
+  CUW: 'cuw.png',
+  CZE: 'cze.webp',
+  ECU: 'ecu.png',
+  EGY: 'egy.webp',
+  ENG: 'eng.png',
+  ESP: 'esp.png',
+  FRA: 'fra.png',
+  GER: 'ger.png',
+  GHA: 'gha.png',
+  HAI: 'hai.png',
+  IRN: 'irn.png',
+  IRQ: 'irq.webp',
+  JOR: 'jor.png',
+  JPN: 'jpn.png',
+  KOR: 'kor.png',
+  KSA: 'ksa.png',
+  MAR: 'mar.png',
+  MEX: 'mex.png',
+  NED: 'ned.png',
+  NOR: 'nor.webp',
+  NZL: 'nzl.webp',
+  PAN: 'pan.png',
+  PAR: 'par.png',
+  POR: 'por.webp',
+  QAT: 'qat.png',
+  RSA: 'rsa.webp',
+  SCO: 'sco.png',
+  SEN: 'sen.png',
+  SUI: 'sui.png',
+  SWE: 'swe.png',
+  TUN: 'tun.png',
+  TUR: 'tur.png',
+  URU: 'uru.png',
+  USA: 'usa.png',
+  UZB: 'uzb.png',
+};
+
+export function getFlagSrc(code: string): string | null {
+  const file = FLAG_FILES[code.toUpperCase()];
+  return file ? `/flags/${file}` : null;
+}
