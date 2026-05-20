@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Anton, Archivo, Cormorant_Garamond, JetBrains_Mono } from 'next/font/google';
+import { Anton, Archivo, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 
 const anton = Anton({
@@ -12,22 +12,14 @@ const anton = Anton({
 const archivo = Archivo({
   variable: '--font-archivo',
   subsets: ['latin', 'latin-ext'],
-  weight: ['500', '700', '900'],
-  display: 'swap',
-});
-
-const cormorant = Cormorant_Garamond({
-  variable: '--font-cormorant',
-  subsets: ['latin', 'latin-ext'],
   weight: ['500', '700'],
-  style: ['normal', 'italic'],
   display: 'swap',
 });
 
 const jetbrains = JetBrains_Mono({
   variable: '--font-jetbrains',
   subsets: ['latin', 'latin-ext'],
-  weight: ['500', '700'],
+  weight: '500',
   display: 'swap',
 });
 
@@ -52,7 +44,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${anton.variable} ${archivo.variable} ${cormorant.variable} ${jetbrains.variable} h-full antialiased`}
+      className={`${anton.variable} ${archivo.variable} ${jetbrains.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

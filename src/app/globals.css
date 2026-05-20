@@ -15,7 +15,6 @@
   --font-sans: var(--font-archivo), system-ui, sans-serif;
   --font-display: var(--font-anton), system-ui, sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, monospace;
-  --font-serif: var(--font-cormorant), Georgia, serif;
 }
 
 html, body {

@@ -1,6 +1,17 @@
 import type { CSSProperties } from 'react';
+import { Cormorant_Garamond } from 'next/font/google';
 import type { Player, Team } from '@/types';
 import { POSITIONS_MAP } from '@/data/positions';
+
+// Cormorant solo se usa en cartas tipo "icono"; cargada localmente para que su
+// woff2 NO entre en el bundle de las páginas que no renderizan <Card>.
+const cormorant = Cormorant_Garamond({
+  variable: '--font-cormorant',
+  subsets: ['latin', 'latin-ext'],
+  weight: '700',
+  style: 'italic',
+  display: 'swap',
+});
 
 interface CardProps {
   player: Player;
@@ -131,6 +142,7 @@ export function Card({ player, team }: CardProps) {
 
   return (
     <div
+      className={cormorant.variable}
       style={{
         width: '300px',
         height: '470px',

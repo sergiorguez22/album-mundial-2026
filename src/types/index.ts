@@ -1,12 +1,15 @@
 export type Confederation = 'UEFA' | 'CAF' | 'AFC' | 'CONMEBOL' | 'CONCACAF' | 'OFC';
 
+export type GroupId =
+  | 'A' | 'B' | 'C' | 'D' | 'E' | 'F'
+  | 'G' | 'H' | 'I' | 'J' | 'K' | 'L';
+
 export interface Team {
   code: string;
   name: string;
   flag: string;
   confederation: Confederation;
-  isHost: boolean;
-  isDebutant: boolean;
+  group: GroupId;
   colors: {
     primary: string;
     secondary: string;
